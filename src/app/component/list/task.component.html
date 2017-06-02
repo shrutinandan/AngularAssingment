@@ -1,0 +1,36 @@
+<div class="main-sub">
+    <div class="search-form">
+        <span class="text-input">
+            <select (change)="onSelect($event.target.value)">
+                <option value="taskId" >TaskId</option>
+                <option value="title"  selected >Title</option>
+                <option value="priority" >Priority</option>
+                <option value="status"  >Status</option>
+            </select>
+          <input placeholder="Search" type="text" name="text" [(ngModel)]="searchText" class="form-control searchDropdown">
+        </span>
+        <label class="search-task"> Incomplete Task :{{count}}</label>
+    </div>
+
+    <table class="table table-hover table-border">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Serial Number</th>
+            <th>Task</th>
+            <th>Priority</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let task of (displayList | search : searchText :searchProp); let i = index;"
+            [ngClass]="{'completed-task' :task.completed }">
+            <td><input [(ngModel)]="task.completed" type="checkbox" (change)="update(task.completed,task,i)"/></td>
+            <td><span>{{task.taskId}}</span></td>
+            <td><span>{{task.title}}</span></td>
+            <td><span>{{task.priority}}</span></td>
+            <td><span>{{ statuses[task.status][lang]}}
+
+            </span></td>
+        </tr>
+    </table>
+</div>

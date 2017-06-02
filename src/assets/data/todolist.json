@@ -1,0 +1,32 @@
+{
+    "list": [
+        {
+            "taskId": 1,
+            "title": "Get Milk",
+            "priority": "High",
+            "status": 0,
+            "completed": false
+        },
+        {
+            "taskId": 2,
+            "title": "Make breakfast",
+            "priority": "High",
+            "status": 1,
+            "completed": false
+        },
+        {
+            "taskId": 3,
+            "title": "Bag Packing",
+            "priority": "High",
+            "status": 2,
+            "completed": false
+        },
+        {
+            "taskId": 4,
+            "title": "Wash Clothes",
+            "priority": "Low",
+            "status": 0,
+            "completed": false
+        }
+    ]
+}

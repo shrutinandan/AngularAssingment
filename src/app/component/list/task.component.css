@@ -1,0 +1,22 @@
+.text-input {
+    display: inline-flex;
+    padding: 30px;
+}
+
+.search-form {
+    margin-right: 23px;
+}
+
+tr.completed-task > td {
+    text-decoration: line-through;
+}
+
+.search-task {
+    display: inline-block;
+    margin-left: 18px;
+    margin-top: 8px;
+}
+
+.searchDropdown {
+    margin: 4px;
+}
